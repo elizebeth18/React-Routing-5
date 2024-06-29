@@ -10,20 +10,29 @@ import PostDetails from "./PostDetails"
 const Routing = () => {
     return (
         <BrowserRouter>
-            <Header />
-            {/* To avoid refresh we must use Link, if we use <a></a> tag
-                it will refresh the pages
+            {/* Components that are common must be mentioned
+                inside the BrowserRouter 
             */}
+
+            <Header />
+            
 
             {/* Route tag must be part of BrowserRouter
             whereas Link tag can be used in any other component
             */}
-
-            {/* history is for Redirection
-                location is for queryParams
-                match is for Params
-            */}
+            
                 <div className="container">
+                    {/* The components that will dynamically change
+                        must be mentioned in the Route  
+                    */}
+
+                    {/* => exact attribute in the 
+                        Route component will match
+                        only the exact path 
+                        => whatever is mentioned after ':' in 
+                        the path attribute must be passed 
+                    */}
+
                     <Route exact path="/" component={Home} />
                     <Route exact path="/post" component={Post} />
                     <Route path="/post/:topic" component={PostDetails}/>

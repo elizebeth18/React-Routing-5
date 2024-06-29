@@ -4,6 +4,9 @@ import {Link} from "react-router-dom";
 const Header = () => {
     return(
         <>
+            {/* To avoid refresh we must use Link, if we use <a></a> tag
+                it will refresh the pages
+            */}
             <nav className="navbar navbar-inverse">
             <div className="container-fluid">
                 <div className="navbar-header">

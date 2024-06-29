@@ -2,6 +2,17 @@ import React from "react";
 
 const PostDetails = (props) => {
     console.log(props);
+            /*  History :
+                    => is for Redirection
+                QueryParams :
+                    => location is for queryParams
+                    => what we pass after ?
+                    => not compulsory to pass
+                Params :
+                    => match is for Params
+                    => what we pass after /
+                    => compulsory to pass
+            */
     return(
         <div className="panel panel-warning">
             <div className="panel-heading">
